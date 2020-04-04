@@ -1,6 +1,6 @@
 import React, { useState} from 'react';
 
-function App() {
+function Example() {
 
   const [ count, setCount] = useState(0);
 
@@ -20,4 +20,4 @@ function App() {
   );
 }
 
-export default App;
+export default Example;

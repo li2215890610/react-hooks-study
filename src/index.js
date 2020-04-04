@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Example from './Example';
+import Admin from "./Admin/index";
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <Example/>
+    <Admin/>
   </React.StrictMode>,
   document.getElementById('root')
 );
