@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div>
-     <h2>{count}</h2>
+     <h2>记录点击{count}次</h2>
 
      <button onClick={()=>{
        setCount(count+1)
