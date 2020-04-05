@@ -6,6 +6,9 @@ function Example2() {
   const [ age] = useState(27);
   const [ work] = useState("新闻记者");
 
+  if (age > 26) {
+    console.log('222');
+  }  
 
   return (<div>
     {name}今年{age}职业{work}
