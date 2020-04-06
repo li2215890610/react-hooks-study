@@ -19,6 +19,28 @@ function Sider() {
     <section>
       <Link to='/Example5'>useReducer</Link>
     </section>
+    <section>
+      <Link to='/Example6'>useReducer、useContext实例</Link>
+    </section>
+    <section>
+      <Link to='/Example7'>useMemo</Link>
+    </section>
+    <section>
+      <Link to='/Example8'>useRef</Link>
+    </section>
+    <section>
+      <Link to='/Example9'>useLayoutEffect</Link>
+    </section>
+    <section>
+      <Link to='/Example10'>useImperativeHandle</Link>
+    </section>
+    <section>
+      <Link to='/Example11'>useDebugValue</Link>
+    </section>
+    <section>
+      <Link to='/Example12'>useCallback</Link>
+    </section>
+  
   </div>)
 }
 

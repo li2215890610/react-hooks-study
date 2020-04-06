@@ -4,9 +4,10 @@ import Admin from "./Admin/index";
 
 
 ReactDOM.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <Admin/>
-  </React.StrictMode>,
+  // </React.StrictMode>
+  ,
   document.getElementById('root')
 );
 

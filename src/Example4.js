@@ -1,23 +1,23 @@
-import React,{ useState, createContext ,useContext } from "react";
+import React, { useState, createContext, useContext } from "react";
 
-  //  createContext ,useContext 配合使用 父子组件传值
+//  createContext ,useContext 配合使用 父子组件传值
 
 const CreateContextValue = createContext() //创建上下文
 
 function Counter(props) {
 
-  const { count, text} = useContext(CreateContextValue) //接收上下文数据
+  const { count, text } = useContext(CreateContextValue) //接收上下文数据
 
-  return (<h2 onClick={()=>{
+  return (<h2 onClick={() => {
     props.onClick(count)
-  }}>
+  }} style={{ cursor: 'pointer' }}>
     {count}{text}
   </h2>)
 }
 
-export default ()=>{
+export default () => {
 
-  const [ count, setCount] = useState(0);
+  const [count, setCount] = useState(0);
 
   function onClick(number) {
     alert(number)
@@ -25,17 +25,17 @@ export default ()=>{
 
   return (
     <div>
-     <h2>记录点击{count}次</h2>
+      <h2>记录点击{count}次</h2>
 
-     <button onClick={()=>{
-       setCount(count+1)
-     }}>点我</button>
-    
-    <CreateContextValue.Provider value={{
-      count,
-      text: '我是一个普通文本'
-    }}>
-      <Counter onClick={onClick}/>
-    </CreateContextValue.Provider>
-  </div>)
+      <button onClick={() => {
+        setCount(count + 1)
+      }}>点我</button>
+
+      <CreateContextValue.Provider value={{
+        count,
+        text: '我是一个普通文本点我'
+      }}>
+        <Counter onClick={onClick} />
+      </CreateContextValue.Provider>
+    </div>)
 }
