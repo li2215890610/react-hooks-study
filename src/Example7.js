@@ -31,7 +31,8 @@ function ChildComponent({name,children}) {
     console.log('她来了----她来了---她带着妹妹走来了');
     return `${name} 韩梅梅向我们走来了`
   }
-  
+
+  //缓存状态 监听状态
   const actionHanMeiMei = useMemo(()=> changeHanMeiMei(name),[name]);
 
   // const actionHanMeiMei = changeHanMeiMei(name);

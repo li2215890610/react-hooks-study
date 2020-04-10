@@ -29,7 +29,7 @@ function Sider() {
       <Link to='/Example8'>useRef</Link>
     </section>
     <section>
-      <Link to='/Example9'>useLayoutEffect</Link>
+      <Link to='/Example9'>useCallback</Link>
     </section>
     <section>
       <Link to='/Example10'>useImperativeHandle</Link>
@@ -38,7 +38,7 @@ function Sider() {
       <Link to='/Example11'>useDebugValue</Link>
     </section>
     <section>
-      <Link to='/Example12'>useCallback</Link>
+      <Link to='/Example12'>useLayoutEffect</Link>
     </section>
   
   </div>)
