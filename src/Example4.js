@@ -1,20 +1,8 @@
-import React, { useState, createContext, useContext } from "react";
+import React, { useState, createContext} from "react";
+import Example4Counter from "./Example4Counter";
+export const CreateContextValue = createContext() //创建上下文
 
 //  createContext ,useContext 配合使用 父子组件传值
-
-const CreateContextValue = createContext() //创建上下文
-
-function Counter(props) {
-
-  const { count, text } = useContext(CreateContextValue) //接收上下文数据
-
-  return (<h2 onClick={() => {
-    props.onClick(count)
-  }} style={{ cursor: 'pointer' }}>
-    {count}{text}
-  </h2>)
-}
-
 export default () => {
 
   const [count, setCount] = useState(0);
@@ -30,12 +18,15 @@ export default () => {
       <button onClick={() => {
         setCount(count + 1)
       }}>点我</button>
-
+    {/* 
+      count 与 text 变量允许跨层级实现传递和使用（也就是实现了上下文），
+      当父组件的count变量发生变化时，子组件也会发生变化
+    */}
+    
       <CreateContextValue.Provider value={{
         count,
-        text: '我是一个普通文本点我'
       }}>
-        <Counter onClick={onClick} />
+        <Example4Counter onClick={onClick} />
       </CreateContextValue.Provider>
     </div>)
 }

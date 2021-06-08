@@ -1,15 +1,18 @@
 import React,{ useReducer} from "react";
 
+const ADD = 'ADD';
+const SUB = 'SUB';
+
 function handleData(state,action) {
   
   switch (action.type) {
-    case 'ADD':
+    case ADD:
       return{
         ...state,
         count: state.count +1 
       }  
     
-    case 'SUB':
+    case SUB:
         return{
           ...state,
           count: state.count -1 
@@ -29,10 +32,10 @@ export default ()=>{
     <h4>现在的分数是 {data.count}</h4>
 
     <button onClick={()=>{
-      dispatch({type: "ADD"})
+      dispatch({type: ADD})
     }}>Increment</button>
     <button onClick={()=>{
-      dispatch({type: "SUB"})
+      dispatch({type: SUB})
     }}>Decrement</button>
 
   </div>)
